@@ -1,5 +1,5 @@
 import React from 'react'
-import { Sidebar } from '../../layouts'
+// import { Sidebar } from '../../layouts'
 import { BasicTable } from '../../components';
 
 const Home = () => {
@@ -24,7 +24,7 @@ const Home = () => {
         `${params.row.firstName || ''} ${params.row.lastName || ''}`,
     },
   ];
-  
+
   const rows = [
     { id: 1, lastName: 'Snow', firstName: 'Jon', age: 35 },
     { id: 2, lastName: 'Lannister', firstName: 'Cersei', age: 42 },

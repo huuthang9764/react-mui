@@ -1,7 +1,5 @@
 import * as React from "react";
-import CssBaseline from "@mui/material/CssBaseline";
 import { useTheme } from "@mui/material/styles";
-import Box from '@mui/material/Box';
 import List from "@mui/material/List";
 import Divider from "@mui/material/Divider";
 import IconButton from "@mui/material/IconButton";
@@ -14,6 +12,7 @@ import ListItemText from "@mui/material/ListItemText";
 import InboxIcon from "@mui/icons-material/MoveToInbox";
 
 import {Drawer,DrawerHeader} from './Sidebar.element'
+import BaseBox from "../base_box/BaseBox";
 
 
 
@@ -58,8 +57,7 @@ export default function Sidebar() {
 
 
   return (
-    <Box sx={{ display: "flex" }}>
-      <CssBaseline />
+    <BaseBox sx={{ display: "flex" }}>
       <Drawer variant="permanent" open={open}>
         <DrawerHeader>
           <IconButton  onClick={()=>setOpen(!open)}>
@@ -108,6 +106,6 @@ export default function Sidebar() {
           })}
         </List>
       </Drawer>
-    </Box>
+    </BaseBox>
   );
 }

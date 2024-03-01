@@ -1,20 +1,20 @@
 import React from 'react';
-import Box from '@mui/material/Box';
 import { Outlet } from 'react-router-dom'
-import {  Sidebar } from '../../components';
+import { Sidebar } from '../../components';
+import BaseBox from '../../components/base_box/BaseBox';
 
 
 const DefaultLayout = () => {
-    return (
-        <>
-            <Box sx={{ display: 'flex' }}>
-                <Sidebar />
-                <Box component="main" sx={{ flexGrow: 1, p: 1 }}>
-                    <Outlet />
-                </Box>
-            </Box>
-        </>
-    );
+  return (
+    <>
+      <BaseBox sx={{ display: 'flex' }}>
+        <Sidebar />
+        <BaseBox component="main" sx={{ flexGrow: 1, p: 1 }}>
+          <Outlet />
+        </BaseBox>
+      </BaseBox>
+    </>
+  );
 };
 
 export default DefaultLayout;
