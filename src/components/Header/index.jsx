@@ -1,13 +1,15 @@
 import React from 'react'
-import { Typography, Box } from "@mui/material";
+import { Typography } from "@mui/material";
+import BaseBox from '../base_box/BaseBox';
 
 
 
 const Header = ({title}) => {
   return (
-   
-    <Box sx={{
-        backgroundColor: 'primary.main'}}>
+
+    <BaseBox sx={{
+      backgroundColor: 'primary.main'
+    }}>
       <Typography
         variant="h4"
         fontWeight="bold"
@@ -15,8 +17,8 @@ const Header = ({title}) => {
       >
         {title}
       </Typography>
-      
-    </Box>
+
+    </BaseBox>
 
   );
 }

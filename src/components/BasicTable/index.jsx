@@ -23,9 +23,9 @@
 // }\
 
 import React from 'react'
-import { Box } from "@mui/material";
 import Header from '../Header';
 import { DataGrid } from '@mui/x-data-grid';
+import BaseBox from '../base_box/BaseBox';
 
 const BasicTable = () => {
   const columns = [
@@ -60,9 +60,9 @@ const BasicTable = () => {
     { id: 9, lastName: 'Roxie', firstName: 'Harvey', age: 65 },
   ];
   return (
-    <Box>
+    <BaseBox>
       {/* <Header title="Dashboard" /> */}
-      <Box
+      <BaseBox
         m="40px 0 0 0"
         height="75vh"
         sx={{
@@ -72,8 +72,8 @@ const BasicTable = () => {
         }}
       >
         <DataGrid checkboxSelection rows={rows} columns={columns} />
-      </Box>
-    </Box>
+      </BaseBox>
+    </BaseBox>
   )
 }
 
